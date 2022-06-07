@@ -1,43 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:paddingStart="38dp"
+    android:paddingEnd="38dp"
+    android:paddingTop="85dp"
+    android:paddingBottom="38dp">
     <TextView
-        android:text="My App"
-        android:layout_width="match_parent"
-        android:layout_height="32.5dp"
+        android:text="Log in to your account"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:minWidth="25px"
         android:minHeight="25px"
         android:id="@+id/textView1"
-        android:gravity="center" />
+        android:textAlignment="center"
+        android:textSize="36dp"
+        android:textStyle="bold"
+        android:textColor="#ffffffff"
+        android:shadowColor="#3C4856"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="1.5"
+        android:layout_marginBottom="60dp"/>
     <TextView
-        android:text="Username"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="USERNAME"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2" />
+        android:id="@+id/textView2"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        android:layout_marginBottom="8dp" />
     <EditText
-        android:inputType="text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText1" />
+        android:id="@+id/usernameET"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        android:minHeight="60dp"
+        android:foregroundGravity="center"
+        android:background="@drawable/input"
+        android:layout_marginBottom="16dp"/>
     <TextView
-        android:text="Password"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="PASSWORD"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView3" />
+        android:id="@+id/textView3"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        android:layout_marginBottom="8dp"  />
     <EditText
         android:inputType="textPassword"
         android:layout_width="match_parent"
+        android:id="@+id/passwordET"
+        android:textAlignment="center"
+        android:textSize="18dp"
         android:layout_height="wrap_content"
-        android:id="@+id/editText2" />
+        android:minHeight="60dp"
+        android:foregroundGravity="center"
+        android:background="@drawable/input"
+        android:layout_marginBottom="40dp" />
     <Button
-        android:text="LOGIN"
-        android:layout_width="match_parent"
+        android:text="LOG IN"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button1"
-        android:backgroundTint="#ff110d0d" />
-</LinearLayout>  
+        android:id="@+id/loginBTN"
+        android:layout_gravity="center"
+        android:backgroundTint="#ffa7bcd6"
+        android:textColor="#ff000000"
+        android:textSize="18dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        app:cornerRadius="42dp"
+        android:height="60dp"
+        android:width="200dp"/>
+
+</LinearLayout>

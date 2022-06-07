@@ -17,6 +17,9 @@ namespace LabExer5
     [Activity(Label = "NextActivity")]
     public class NextActivity : Activity
     {
+        //readonly string IP_ADDRESS = "192.168.1.130"; //mark
+        readonly string IP_ADDRESS = "192.168.18.4"; //charmaine
+
         EditText editName, editSchool, searchName;
         Button btnAdd, btnSearch, btnUpdate, btnHome, btnDelete;
         RadioGroup gender;
@@ -80,7 +83,7 @@ namespace LabExer5
 
                 try
                 {
-                    nextRequest = (HttpWebRequest)WebRequest.Create("http://192.168.1.130/IT140P/REST/search_record.php?name=" + name);
+                    nextRequest = (HttpWebRequest)WebRequest.Create("http://" + IP_ADDRESS + "/IT140P/REST/search_record.php?name=" + name);
                     nextResponse = (HttpWebResponse)nextRequest.GetResponse();
                     res = nextResponse.ProtocolVersion.ToString();
                     StreamReader reader = new StreamReader(nextResponse.GetResponseStream());
@@ -94,7 +97,7 @@ namespace LabExer5
                 }
                 catch (Exception)
                 {
-                    nextRequest = (HttpWebRequest)WebRequest.Create("http://192.168.1.130/IT140P/REST/add_record.php?name=" + name + " &school=" + school + " &country=" + country + " &gender=" + selectedGender);
+                    nextRequest = (HttpWebRequest)WebRequest.Create("http://" + IP_ADDRESS + "/IT140P/REST/add_record.php?name=" + name + " &school=" + school + " &country=" + country + " &gender=" + selectedGender);
                     nextResponse = (HttpWebResponse)nextRequest.GetResponse();
                     StreamReader reader = new StreamReader(nextResponse.GetResponseStream());
                     res = reader.ReadToEnd();
@@ -119,7 +122,7 @@ namespace LabExer5
             nameToBeSearched = searchName.Text;
             if (nameToBeSearched == "") { nameToBeSearched = "N/A"; }
 
-            nextRequest = (HttpWebRequest)WebRequest.Create("http://192.168.1.130/IT140P/REST/search_record.php?name=" + nameToBeSearched);
+            nextRequest = (HttpWebRequest)WebRequest.Create("http://" + IP_ADDRESS + "/IT140P/REST/search_record.php?name=" + nameToBeSearched);
             nextResponse = (HttpWebResponse)nextRequest.GetResponse();
             res = nextResponse.ProtocolVersion.ToString();
             StreamReader reader = new StreamReader(nextResponse.GetResponseStream());
@@ -168,7 +171,7 @@ namespace LabExer5
                     school = editSchool.Text;
                     country = autoCompleteCountry.Text;
 
-                    nextRequest = (HttpWebRequest)WebRequest.Create("http://192.168.1.130/IT140P/REST/update_record.php?student_ID=" + record_ID + " &name=" + name + " &school=" + school + " &country=" + country + " &gender=" + selectedGender);
+                    nextRequest = (HttpWebRequest)WebRequest.Create("http://" + IP_ADDRESS + "/IT140P/REST/update_record.php?student_ID=" + record_ID + " &name=" + name + " &school=" + school + " &country=" + country + " &gender=" + selectedGender);
                     nextResponse = (HttpWebResponse)nextRequest.GetResponse();
                     StreamReader reader = new StreamReader(nextResponse.GetResponseStream());
                     res = reader.ReadToEnd();
@@ -192,7 +195,7 @@ namespace LabExer5
             school = editSchool.Text;
             country = autoCompleteCountry.Text;
 
-            nextRequest = (HttpWebRequest)WebRequest.Create("http://192.168.1.130/IT140P/REST/delete_record.php?name=" + name + " &school=" + school + " &country=" + country + " &gender=" + selectedGender);
+            nextRequest = (HttpWebRequest)WebRequest.Create("http://" + IP_ADDRESS + "/IT140P/REST/delete_record.php?name=" + name + " &school=" + school + " &country=" + country + " &gender=" + selectedGender);
             nextResponse = (HttpWebResponse)nextRequest.GetResponse();
             StreamReader reader = new StreamReader(nextResponse.GetResponseStream());
             res = reader.ReadToEnd();

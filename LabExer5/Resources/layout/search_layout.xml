@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+            android:background="@drawable/gradient_background">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="38dp"
+            android:paddingEnd="38dp"
+            android:paddingTop="125dp"
+            android:paddingBottom="38dp">
+            <TextView
+                android:text="Search a student record"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:id="@+id/textView1"
+                android:textAlignment="center"
+                android:textSize="36dp"
+                android:textStyle="bold"
+                android:textColor="#ffffffff"
+                android:shadowColor="#3C4856"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1.5"
+                android:layout_marginBottom="32dp"
+                android:layout_gravity="center" />
+            <TextView
+                android:text="NAME"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="18dp"
+                android:layout_marginBottom="8dp"
+                android:id="@+id/textView5" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/searchName"
+                android:textAlignment="center"
+                android:textSize="18dp"
+                android:minHeight="60dp"
+                android:foregroundGravity="center"
+                android:background="@drawable/input"
+                android:layout_marginBottom="16dp" />
+            <Button
+                android:text="SEARCH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonSearch"
+                android:layout_gravity="center"
+                android:textColor="#ff000000"
+                android:textSize="18dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:height="40dp"
+                android:width="200dp"
+                android:layout_marginBottom="85dp"
+                android:background="@drawable/button" />
+            <Button
+                android:text="HOME"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="#ff000000"
+                android:textSize="18dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:height="40dp"
+                android:width="200dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/button"
+                android:id="@+id/buttonHome" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -20,7 +20,7 @@ namespace LabExer5
         Button loginBTN;
         HttpWebResponse response;
         HttpWebRequest request;
-        string res = "", str = "";
+        string res = "";
         string uname = "";
         string pword = "";
 
@@ -51,8 +51,7 @@ namespace LabExer5
 
             if (res.Contains("OK!"))
             {
-                Intent i = new Intent(this, typeof(NextActivity));
-                i.PutExtra("Name: ", uname);
+                Intent i = new Intent(this, typeof(HomeActivity));
                 StartActivity(i);
             }
         }

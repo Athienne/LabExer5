@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    android:background="@drawable/gradient_background">
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
@@ -11,13 +12,12 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/gradient_background"
             android:paddingStart="38dp"
             android:paddingEnd="38dp"
             android:paddingTop="38dp"
             android:paddingBottom="38dp">
             <TextView
-                android:text="Search/Add/Update/Delete a student record"
+                android:text="Add a new student record"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -32,42 +32,8 @@
                 android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="1.5"
-                android:layout_marginBottom="28dp"/>
-            <TextView
-                android:text="SEARCH BY NAME"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:textSize="18dp"
-                android:layout_marginBottom="8dp"
-                android:id="@+id/textView5" />
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/searchName"
-                android:textAlignment="center"
-                android:textSize="18dp"
-                android:minHeight="60dp"
-                android:foregroundGravity="center"
-                android:background="@drawable/input"
-                android:layout_marginBottom="16dp" />
-            <Button
-                android:text="SEARCH"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/buttonSearch"
-                android:layout_gravity="center"
-                android:textColor="#ff000000"
-                android:textSize="18dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:paddingLeft="30dp"
-                android:paddingRight="30dp"
-                android:height="40dp"
-                android:width="200dp"
-                android:layout_marginBottom="40dp"
-                android:background="@drawable/button" />
+                android:layout_marginBottom="28dp"
+                android:layout_gravity="center" />
             <TextView
                 android:text="NAME"
                 android:textAppearance="?android:attr/textAppearanceSmall"
@@ -172,41 +138,9 @@
                 android:paddingRight="30dp"
                 android:height="40dp"
                 android:width="200dp"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="85dp"
                 android:background="@drawable/button"
                 android:id="@+id/buttonAdd" />
-            <Button
-                android:text="UPDATE"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:textColor="#ff000000"
-                android:textSize="18dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:paddingLeft="30dp"
-                android:paddingRight="30dp"
-                android:height="40dp"
-                android:width="200dp"
-                android:layout_marginBottom="16dp"
-                android:background="@drawable/button"
-                android:id="@+id/buttonUpdate" />
-            <Button
-                android:text="DELETE"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:textColor="#ff000000"
-                android:textSize="18dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:paddingLeft="30dp"
-                android:paddingRight="30dp"
-                android:height="40dp"
-                android:width="200dp"
-                android:layout_marginBottom="40dp"
-                android:background="@drawable/button"
-                android:id="@+id/buttonDelete" />
             <Button
                 android:text="HOME"
                 android:layout_width="wrap_content"
@@ -220,7 +154,7 @@
                 android:paddingRight="30dp"
                 android:height="40dp"
                 android:width="200dp"
-                android:layout_marginBottom="32dp"
+                android:layout_marginBottom="8dp"
                 android:background="@drawable/button"
                 android:id="@+id/buttonHome" />
         </LinearLayout>
